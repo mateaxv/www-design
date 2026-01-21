@@ -4,7 +4,7 @@
 
 We are using the following three core technologies: **VSCode, Git, and Vercel**. You are free to experiment with other services or tools, but for the sake of consistency and easier troubleshooting with your peers, we recommend sticking with this shared environment.
 
-This page references official guides and installation resources. If you encounter problems, always consult the official documentation first and carefully follow the provided instructions.
+This page references official guides and installation resources. If you encounter problems, you might want to have a look at the official documentation.
 
 ### VSCode
 
@@ -18,7 +18,7 @@ After installing, you can access it from the bottom status bar in VSCode.
 
 ### Git
 
-Git is required for version control and for interacting with GitHub. Install it using the instructions provided in the official guide:
+Git is required for version control and for interacting with GitHub. It makes sure you can go back in your code's history. This way you cannot destroy anything if you commited it before. Install it using the instructions provided in the official guide:
 [How to Install Git](https://github.com/git-guides/install-git)
 
 #### Ssh Key
@@ -31,11 +31,11 @@ Our course repository is hosted on GitHub. To work independently, you will need 
 1. Open the course repository link: [www-design](https://github.com/maaaaaaaaaaaaaaaax/www-design)
 2. Click the **Fork** button in the top right corner – this creates a copy of the repository under your account.
 3. Make your you have created a working Ssh Key in the previous step
-4. Clone your forked repository locally using Git: [https://docs.github.com/de/repositories/creating-and-managing-repositories/cloning-a-repository](https://docs.github.com/de/repositories/creating-and-managing-repositories/cloning-a-repository)
+4. Clone your forked repository onto your computer using Git: [https://docs.github.com/de/repositories/creating-and-managing-repositories/cloning-a-repository](https://docs.github.com/de/repositories/creating-and-managing-repositories/cloning-a-repository)
 
 ### Vercel
 
-[--]
+We are going to use vercel to host our code and publish your website. This way you can access it from anywhere, you will have a "real" website after this step.
 
 ## Running
 
