@@ -6,7 +6,8 @@ TARGET_DIR="./content"
 echo "export const content = [" > $OUTPUT
 
 # Generate array with file metadata including modification times
-find $TARGET_DIR -type f | while read file; do
+# Sort files by name for consistency
+find $TARGET_DIR -type f | sort | while read -r file; do
   # Get file modification time as ISO string
   if [[ "$OSTYPE" == "darwin"* ]]; then
     # macOS
@@ -40,7 +41,10 @@ find $TARGET_DIR -type f | while read file; do
     file_type="null"
   fi
   
-  echo "  { file: '$file', lastModified: '$mod_time', fileType: '$file_type' }," >> $OUTPUT
+  # Properly escape single quotes in the file path for JavaScript
+  escaped_file="${file//\'/\\\'}"
+  
+  echo "  { file: '$escaped_file', lastModified: '$mod_time', fileType: '$file_type' }," >> $OUTPUT
 done
 
 echo "];" >> $OUTPUT
